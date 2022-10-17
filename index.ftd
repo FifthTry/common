@@ -101,3 +101,20 @@ optional ftd.image-src post-image:
 optional body body:
 string post-url:
 author-meta author:
+
+
+
+
+
+
+
+
+
+
+;common venue record for any event, you can use this into event package
+-- record venue:
+caption name:
+optional string location:
+optional string address:
+optional string website:
+optional string link:
