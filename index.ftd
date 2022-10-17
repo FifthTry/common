@@ -1,57 +1,103 @@
 -- import: fifthtry.github.io/common/assets
+-- import: fifthtry.github.io/package-doc/doc as pd
 
 
 
--- ds.page: Welcome to your [FPM site](https://fpm.dev/)
+-- ft.page: Common
 
-FPM Blank Package Template Repo
+Common package is created via using FTD language as a library of common 
+components which are re-usable across your FTd web pages. 
 
-🧑‍🚀 **Seasoned traveler?** update this file. Enjoy!
-
-
---- ds.image: doc-site
-src: $assets.files.doc-site-example.png
-width: fill
-
-
---- ds.h1: 🚀 Project Structure
-
-Inside of your FPM project, you'll see the following folders and files:
-
-
---- ds.code:
-lang:
-
-/
-├── .build/
-│   └── index.html
-├── .packages/
-│   └── fifthtry.github.io/
-│   	└── All downloaded dependencies
-│   	
-├── FPM.ftd
-├── index.ftd
-└── README.md
+Take a look at below documentation to know how to use common components.
 
 
 
---- ds.h1: 🧞 Commands
 
-All commands are run from the root of the project, from a terminal:
+-- pd.package: Common and its usage
+name: fifthtry.github.io/common
 
---- ds.code:
-lang:
+To use `common` on your web package, add below into `FPM.ftd` file:
 
-=======================================================================
-| Command                | Action                                     |
-| :--------------------- | :----------------------------------------- |
-| fpm build              | FPM builder installs all `FPM` dependencies|
-| fpm serve              | Starts local dev server at available port  |
-|                        | `localhost:8000`                           |
-=======================================================================
+-- cb.code:
+lang: ftd
+
+\-- fpm.dependency: fifthtry.github.io/common as common
+\-- fpm.auto-import: common
 
 
---- ds.h1: 👀 Want to learn more?
 
-Feel free to check [our documentation](https://fpm.dev/) or jump into our [FifthTry Discord server](https://discord.gg/bucrdvptYd).
+-- tf.markdown:
 
+Once you add above lines into your web package, add `common` into your `.ftd` 
+files. E.g. using host meta for events:
+
+-- cb.code: Example code for `-- common.host`
+lang: ftd
+
+\-- common.host amitu: Amit Upadhyay
+title: CEO, FifthTry, Inc
+email: amitu@fifthtry.com
+website: www.fifthtry.com
+avatar: $assets.files.static.amitu.jpg
+
+Founder CEO of FifthTry Private Limited. FifthTry is backed by Y Combinators. 
+A Banglore based start-up having development center at 91Springboard, JP Nagar, 
+Banglore.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;common host record for any event, you can use this into event package
+-- record host:
+caption name:
+string title:
+string email:
+string website:
+ftd.image-src avatar: $assets.files.static.avatar.svg
+optional body bio:
+
+
+
+
+
+
+
+
+
+;author-meta can be used insite doc-site blog
+-- record author-meta:
+caption title:
+string profile:
+string company:
+string bio-url:
+optional ftd.image-src image:
+body body:
+
+
+
+
+
+
+
+
+
+
+;post-meta can be used insite doc-site blog
+-- record post-meta:
+caption title:
+string published-on:
+optional ftd.image-src post-image:
+optional body body:
+string post-url:
+author-meta author:
