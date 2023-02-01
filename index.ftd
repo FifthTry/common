@@ -16,13 +16,13 @@ Take a look at below documentation to know how to use common components.
 -- pd.package: Common and its usage
 name: fifthtry.github.io/common
 
-To use `common` on your web package, add below into `FPM.ftd` file:
+To use `common` on your web package, add below into `FASTN.ftd` file:
 
 -- cb.code:
 lang: ftd
 
-\-- fpm.dependency: fifthtry.github.io/common as common
-\-- fpm.auto-import: common
+\-- fastn.dependency: fifthtry.github.io/common as common
+\-- fastn.auto-import: common
 
 
 
