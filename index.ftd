@@ -94,13 +94,13 @@ body body:
 
 
 ;;post-meta can be used insite doc-site blog
--- record post-meta:
-caption title:
-string published-on:
-optional ftd.image-src post-image:
-optional body body:
-string post-url:
-author-meta author:
+-- record host:
+caption name:
+optional string title:
+optional string email:
+optional string website:
+optional ftd.image-src avatar: $assets.files.static.avatar.svg
+optional body bio:
 
 
 
