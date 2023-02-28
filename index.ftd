@@ -61,10 +61,10 @@ at 91Springboard, JP Nagar, Banglore.
 ;;common host record for any event, you can use this into event package
 -- record host:
 caption name:
-string title:
-string email:
-string website:
-ftd.image-src avatar: $assets.files.static.avatar.svg
+optional string title:
+optional string email:
+optional string website:
+optional ftd.image-src avatar: $assets.files.static.avatar.svg
 optional body bio:
 
 
@@ -94,13 +94,13 @@ body body:
 
 
 ;;post-meta can be used insite doc-site blog
--- record host:
-caption name:
-optional string title:
-optional string email:
-optional string website:
-optional ftd.image-src avatar: $assets.files.static.avatar.svg
-optional body bio:
+-- record post-meta:
+caption title:
+string published-on:
+optional ftd.image-src post-image:
+optional body body:
+string post-url:
+author-meta author:
 
 
 
