@@ -1,7 +1,6 @@
 -- import: fastn
 
 -- fastn.package: fifthtry.github.io/common
-download-base-url: https://raw.githubusercontent.com/fifthtry/common/main
 
 -- fastn.dependency: fifthtry.github.io/package-doc as pd
 
